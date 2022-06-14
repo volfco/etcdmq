@@ -1,9 +1,16 @@
 [package]
 name = "etcdmq"
-version = "0.0.1"
-edition = "2021"
+description = "Lightweight Message Queue backed by etcd"
+authors = ["Colum McGaley <rust@m1.volf.co>"]
+edition = "2018"
+license = "Apache-2.0"
+version = "0.0.3"
+keywords = ["etcd", "message-queue", "mq"]
+categories = ["concurrency"]
+homepage = "https://rust.volf.co/etcdmq"
+repository = "https://github.com/volfco/etcdmq"
+readme = "README.md"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 tokio = { version = "1.16", features = ["full"] }

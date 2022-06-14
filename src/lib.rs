@@ -218,7 +218,6 @@ impl Queue {
 
         // write the message body
         self.etcd_client
-            // TODO span
             .put(
                 msg_key,
                 tracing::trace_span!("to_json").in_scope(|| serde_json::to_vec(&message))?,
@@ -235,11 +234,6 @@ impl Queue {
             .await?;
 
         Ok(())
-    }
-
-    #[instrument(skip(self))]
-    pub async fn recv(&self) {
-        todo!()
     }
 
     /// Try and consume a message
